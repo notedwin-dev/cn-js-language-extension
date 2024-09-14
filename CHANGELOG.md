@@ -14,3 +14,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Initial release
 - added `.cn.js` logo
+
+## v1.0.2 - 2024-09-15
+
+### Added
+
+- N/A
+
+### Changed
+
+- update alias on vscode marketplace
