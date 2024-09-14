@@ -1,5 +1,6 @@
 {
   "name": "cn-js",
+  "icon": "icon.png",
   "displayName": "Chinese JavaScript",
   "description": "This extension adds support for Chinese syntax in JavaScript code within VS Code. It replaces traditional JavaScript keywords with their Chinese equivalents, providing a localized programming experience for Chinese-speaking developers. Features include syntax highlighting and language support for `.cn.js` files, making it easier to write and read JavaScript code using Chinese terms.",
   "publisher": "notedwin-dev",
