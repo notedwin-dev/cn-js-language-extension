@@ -2,7 +2,12 @@
   "name": "cn-js",
   "displayName": "Chinese JavaScript",
   "description": "This extension adds support for Chinese syntax in JavaScript code within VS Code. It replaces traditional JavaScript keywords with their Chinese equivalents, providing a localized programming experience for Chinese-speaking developers. Features include syntax highlighting and language support for `.cn.js` files, making it easier to write and read JavaScript code using Chinese terms.",
-  "version": "0.0.1",
+  "publisher": "notedwin-dev",
+  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/notedwin-dev/cn-js-extension.git"
+  },
   "engines": {
     "vscode": "^1.93.0"
   },
@@ -34,6 +39,23 @@
         "language": "chinese-js",
         "scopeName": "source.cnjs",
         "path": "./syntaxes/Chinese-JavaScript.tmLanguage.json"
+      },
+      {
+        "language": "javascript",
+        "scopeName": "source.js",
+        "path": "./syntaxes/JavaScript.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.tag.js": "cn.js-tags",
+          "meta.tag.without-attributes.js": "cn.js-tags",
+          "meta.tag.attributes.js": "chinese-javascript",
+          "meta.embedded.expression.js": "chinese-javascript"
+        },
+        "tokenTypes": {
+          "entity.name.type.instance.jsdoc": "other",
+          "entity.name.function.tagged-template": "other",
+          "meta.import string.quoted": "other",
+          "variable.other.jsdoc": "other"
+        }
       }
     ]
   }

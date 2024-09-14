@@ -127,5 +127,11 @@
         }
       ]
     }
+  },
+  "embeddedLanguages": {
+    "meta.tag.js": "chinese-js",
+    "meta.tag.without-attributes.js": "chinese-js",
+    "meta.tag.attributes.js": "chinese-js",
+    "meta.embedded.expression.js": "chinese-js"
   }
 }
