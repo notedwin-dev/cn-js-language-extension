@@ -6,7 +6,10 @@
     { "include": "#strings" },
     { "include": "#keywords" },
     { "include": "#numbers" },
-    { "include": "#identifiers" }
+    { "include": "#identifiers" },
+    { "include": "#variable-declarations" },
+    { "include": "#control-statements" },
+    { "include": "#console-methods" }
   ],
   "repository": {
     "comments": {
@@ -52,11 +55,15 @@
       "patterns": [
         {
           "name": "keyword.control.cnjs",
-          "match": "\\b(如果|否则|当|返回|循环)\\b"
+          "match": "\\b(抛出|导出|导入|循环|元素循环|新建|当|做|如果|否则如果|否则|切换|方案|类|方法)\\b"
         },
         {
           "name": "keyword.operator.cnjs",
           "match": "\\b(等于|大于|小于|加|减)\\b"
+        },
+        {
+          "name": "keyword.declaration.cnjs",
+          "match": "\\b(让|变量|常量|函数)\\b"
         }
       ]
     },
@@ -73,6 +80,50 @@
         {
           "name": "variable.other.local.cnjs",
           "match": "\\b[_$a-zA-Z][_a-zA-Z0-9]*\\b"
+        }
+      ]
+    },
+    "variable-declarations": {
+      "patterns": [
+        {
+          "name": "variable.declaration.cnjs",
+          "match": "\\b(让|变量|常量)\\b\\s+[_$a-zA-Z][_a-zA-Z0-9]*"
+        },
+        {
+          "name": "variable.assignment.cnjs",
+          "match": "\\b[_$a-zA-Z][_a-zA-Z0-9]*\\s*(?:=|等于)\\s*[^;]+"
+        }
+      ]
+    },
+    "control-statements": {
+      "patterns": [
+        {
+          "name": "keyword.control.return.cnjs",
+          "match": "\\b返回\\b"
+        },
+        {
+          "name": "keyword.control.break.cnjs",
+          "match": "\\b中断\\b"
+        },
+        {
+          "name": "keyword.control.continue.cnjs",
+          "match": "\\b继续\\b"
+        },
+        {
+          "name": "keyword.control.while.cnjs",
+          "match": "\\b当\\b"
+        },
+        {
+          "name": "keyword.control.do.cnjs",
+          "match": "\\b做\\b"
+        }
+      ]
+    },
+    "console-methods": {
+      "patterns": [
+        {
+          "name": "support.function.console.cnjs",
+          "match": "\\bconsole\\.(log|error|warn|info|debug|trace|dir|dirxml|assert|count|group|groupCollapsed|groupEnd|table|time|timeEnd|profile|profileEnd|timeStamp|clear)\\b"
         }
       ]
     }
