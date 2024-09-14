@@ -1,0 +1,80 @@
+{
+  "name": "Chinese JavaScript",
+  "scopeName": "source.cnjs",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#keywords" },
+    { "include": "#numbers" },
+    { "include": "#identifiers" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.cnjs",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.cnjs",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.cnjs",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.cnjs",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.cnjs",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.cnjs",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.cnjs",
+          "match": "\\b(如果|否则|当|返回|循环)\\b"
+        },
+        {
+          "name": "keyword.operator.cnjs",
+          "match": "\\b(等于|大于|小于|加|减)\\b"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.cnjs",
+          "match": "\\b\\d+\\b"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "name": "variable.other.local.cnjs",
+          "match": "\\b[_$a-zA-Z][_a-zA-Z0-9]*\\b"
+        }
+      ]
+    }
+  }
+}
