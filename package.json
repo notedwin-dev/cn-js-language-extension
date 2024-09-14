@@ -7,7 +7,7 @@
   "version": "1.0.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/notedwin-dev/cn-js-extension.git"
+    "url": "https://github.com/notedwin-dev/cn-js-language-extension.git"
   },
   "engines": {
     "vscode": "^1.93.0"
